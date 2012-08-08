@@ -754,8 +754,8 @@ var utest = (function (window, document, setTimeout, clearTimeout) {
       default:
         return;
       }
-      var message = (res.name ? res.name + '> ' : '') + res.message;
-      span.title ? (span.title += '\n' + (res.result ? '' : '[!] ') + message) : (span.title = message);
+      var message = (res.result ? '' : '[!] ') + (res.name ? res.name + '> ' : '') + res.message;
+      span.title ? (span.title += '\n' + message) : (span.title = message);
 
       this.header.innerHTML = [
         this.name,
